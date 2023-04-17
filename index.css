@@ -1082,94 +1082,6 @@ tr .tg-cly1:nth-child(1){ text-align: center;}
     display: none;
 }
 
-/* .fofo .form-details{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: 100%;
-}
-
-.fofo .form-details form{
-    width: 50vw;
-    display: flex;
-    flex-direction:column;
-    background-color: #fff;
-    box-shadow:0 4px 12px 0 rgba(5,5,5,0.1);
-    padding: 5% 5%;
-    border-radius: 5px 0 0 5px;
-  }
-  
-.fofo .form-details  form h1{
-    font-family: 'Open Sans';
-    text-align: center;
-    font-weight: 700;
-    font-size: 2.6vw;
-    color: #454545;
-    margin-bottom: 20px;
-}
-
-.fofo .form-details  label{
-    font-size: 1vw;
-    color: #454545;
-    font-weight: 700;
-    font-family: 'Open Sans', sans-serif;
-    margin-top: -5px;
-}
-
-.fofo .form-details input{
-    margin:5% 0;
-    margin-bottom: 5%;
-    border : none;
-    outline: none;
-    color: rgba(69, 69, 69, 1.0);
-    background: none;
-    border-bottom: 1px solid #454545;
-}
-
-.fofo .form-details input:focus{
-    border-bottom: 2px solid #454545;
-}
-
-.fofo .form-details input[placeholder]{
-    color: #454545;
-    font-size: 1vw;
-    font-family: 'Open Sans', sans-serif;
-    padding: 5px 0;
-}
-
-.fofo .form-details textarea{
-    border: none;
-    border-bottom: 1px solid #454545;
-    margin-bottom: 10%;
-    margin-top: 5%;
-    background-color: rgba(236, 236, 236, 0.432);
-}
-
-.fofo .form-details textarea:focus{
-    border-bottom: 2px solid #454545;
-    outline: none;
-}
-
-.fofo .form-details textarea[placeholder]{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1vw;
-}
-
-.fofo .form-details form button{
-    border: none;
-    padding: 4% 0;
-    background-color: rgba(67, 137, 250, 255);
-    color: #ebebeb;
-    cursor: pointer;
-    transition: box-shadow 0.25s ease;
-    font-size: 1vw;
-}
-
-.fofo .form-details form button:hover{
-    box-shadow: 1px 5px 30px rgba(0, 0, 0, 0.253);
-} */
-
 .gallery{
     display: flex;
     flex-direction: column;
@@ -1549,6 +1461,163 @@ textarea[placeholder]{
 .D8bnZd{
     background-color: transparent !important;
 }
+
+.sdg-goals{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1%;
+    /* outline: 1px solid red; */
+    gap: 10px;
+    position: relative;
+}
+
+.vr{
+    border: none;
+    width: 2px;
+    height: 90%;
+    background: rgba(0, 0, 0, 0.397);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -5;
+}
+
+.vr-nav{
+    border: none;
+    width: 2px;
+    height: 70%;
+    background: rgba(0, 0, 0, 0.397);
+    position: fixed;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -8;
+}
+
+.sdg-nav{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+    gap: 6rem;
+    left: 5%;
+}
+
+.sdg-nav-link{
+    text-decoration: none;
+    color: #454545;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 50%;
+    padding: 1.5rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sdg-nav-link:focus{
+    background-color: #4389fa;
+    color: #cccccc;
+}
+
+.sdg-goal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12rem;
+    /* outline: 1px solid red; */
+    padding: 1%;
+    height: max-content
+}
+
+.sdg-goal-card{
+    padding: 1%;
+    background: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    position: relative;
+    overflow-y: hidden;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    transform: translateX(3rem);
+    border-radius: 5px;
+}
+
+.sdg-goal-card:hover .click-to-reveal{
+    transform: translateY(0)
+}
+
+.click-to-reveal{
+    position: absolute;
+    width: 100%;
+    height: 3rem;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgb(0, 0, 0, 0.04), rgb(0, 0, 0, 0.1) , rgb(0, 0, 0, 0.5));
+    color: rgb(236, 236, 236);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    transform: translateY(100%);
+    font-size: 1rem;
+}
+
+.sdg-goal-card img{
+    aspect-ratio: 1;
+    width: 16rem;
+}
+
+.sdg-goal-project{
+    background: white;
+    display: flex;
+    height: 16rem;
+    max-height: 16rem;
+    overflow: hidden;
+    padding: 3rem;
+    width: 0;
+    opacity: 0;
+    border-radius: 5px;
+    transition: width 0.5s ease, opacity 0.3s ease 0.6s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+input[type="checkbox"]{
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .sdg-goal-project{
+    width: 25rem; /*temporary*/
+    opacity: 1;
+}
+
+input[type="checkbox"]:not(:checked) ~ .sdg-goal-project{
+    transition: opacity 0.3s ease, width 0.5s ease;
+    opacity: 0;
+    width: 0;
+}
+
+input[type="checkbox"]:checked ~ .sdg-goal-card {
+    /* transition: transform 0.5s ease 0.5s; */
+    transform: translateX(0);
+}
+
+input[type="checkbox"]:checked ~ .sdg-goal-card .click-to-reveal{
+    transform: translateY(100%)
+}
+
+
+
 
 @media screen and (max-width: 800px) {
     .nav-main .nav-btns{

@@ -1,4 +1,55 @@
 // import { CountUp } from './countUp.min.js';
+const nav = document.querySelector(".nav-main-mobile");
+const hamburger = document.querySelector(".hamburger");
+
+function menuToggle(e){
+  nav.classList.toggle("nav-main-hide-mobile");
+  hamburger.children[0].classList.toggle("x");
+  hamburger.children[2].classList.toggle("y");
+  hamburger.children[1].classList.toggle("x-fade");
+}
+
+const swiper = new Swiper('.main-swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: true,
+  },
+  keyboard: {
+    enabled: true,
+  },
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+
+const projectsSwiper = new Swiper('.projects-swiper', {
+  loop: true,
+  slidesPerView: "auto",
+  centeredSlides: true,
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: false,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+
 AOS.init();
 
 var lastScrollTop = 0;
@@ -47,19 +98,9 @@ navLinks.forEach((anchor, i) => {
   });
 });
 
-const nav = document.querySelector(".nav-main-mobile");
-const hamburger = document.querySelector(".hamburger");
-
-function menuToggle(e){
-  nav.classList.toggle("nav-main-hide-mobile");
-  hamburger.children[0].classList.toggle("x");
-  hamburger.children[2].classList.toggle("y");
-  hamburger.children[1].classList.toggle("x-fade");
-}
-
 if(screen.width<575) document.querySelectorAll(".point-card").forEach((card)=>{card.setAttribute("data-aos","fade-right")});
 
-let galleryCount = 6; //obtain from external JSON file later
+let galleryCount = 7; //obtain from external JSON file later
 let galleryImgs = [
   {imgSrc: "images/1.jpeg", desc: "CIBA MoU"},
   {imgSrc: "images/2.jpeg", desc: "Vanakkam Startups"},
@@ -70,7 +111,8 @@ let galleryImgs = [
   {imgSrc: "images/Discussion with Mailswamy Sivam.jpeg", desc: "Dicussion with Dr.Sivam"},
   {imgSrc: "images/11.jpg", desc: "CTS Innovation"},
   {imgSrc: "images/14.jpg", desc: "Underwater Vehicle Team"},
-  {imgSrc: "images/caro-2.jpg", desc: "UMAGINE - Sathyabama TBI"}
+  {imgSrc: "images/caro-2.jpg", desc: "UMAGINE - Sathyabama TBI"},
+  {imgSrc: "images/MoU with AIIRF.jpg", desc: "MoU with AIIRF"}
 ]
 
 const gallerySection = document.querySelector(".gallery-images");
@@ -115,46 +157,7 @@ const galleryImages = document.querySelectorAll(".gallery-image").forEach(elemen
     galModal.children[0].children[1].innerText = `${e.target.getAttribute("alt")}`;
   })
 });
-const swiper = new Swiper('.main-swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    spaceBetween: 20,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: true,
-    },
-    keyboard: {
-      enabled: true,
-    },
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-});
 
-const projectsSwiper = new Swiper('.projects-swiper', {
-    loop: true,
-    slidesPerView: "auto",
-    centeredSlides: true,
-    spaceBetween: 20,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: false,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-});
 
 Splitting();
 ScrollOut({
@@ -181,7 +184,7 @@ const companyCountUpOptions = {
   suffix: ' +',
 };
 
-var companyCountUp = new countUp.CountUp('company-countup', 91, companyCountUpOptions);
+var companyCountUp = new countUp.CountUp('company-countup', 85, companyCountUpOptions);
 if (!companyCountUp.error) {
   companyCountUp.start();
 } else {
