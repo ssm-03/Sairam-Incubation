@@ -91,7 +91,6 @@ const navLinks = document.querySelectorAll('a[href^="#"]');
 navLinks.forEach((anchor, i) => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-  
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
       });
@@ -100,7 +99,7 @@ navLinks.forEach((anchor, i) => {
 
 if(screen.width<575) document.querySelectorAll(".point-card").forEach((card)=>{card.setAttribute("data-aos","fade-right")});
 
-let galleryCount = 7; //obtain from external JSON file later
+ //obtain from external JSON file later
 let galleryImgs = [
   {imgSrc: "images/1.jpeg", desc: "CIBA MoU"},
   {imgSrc: "images/2.jpeg", desc: "Vanakkam Startups"},
@@ -113,7 +112,8 @@ let galleryImgs = [
   {imgSrc: "images/14.jpg", desc: "Underwater Vehicle Team"},
   {imgSrc: "images/caro-2.jpg", desc: "UMAGINE - Sathyabama TBI"},
   {imgSrc: "images/MoU with AIIRF.jpg", desc: "MoU with AIIRF"}
-]
+];
+let galleryCount = galleryImgs.length-3;
 
 const gallerySection = document.querySelector(".gallery-images");
 
@@ -143,7 +143,6 @@ const modalOpen = ()=>{
   if (navCheck.classList.length == 1 && screen.width > 575){
     navCheck.classList.toggle("nav-main-hide");
   }
-  // navCheck.classList.toggle("nav-main-hide");
 }
 
 const galleryImages = document.querySelectorAll(".gallery-image").forEach(element => {

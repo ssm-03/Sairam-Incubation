@@ -35,9 +35,9 @@
 
     <nav class="nav-main-mobile nav-main-hide-mobile">
         <div class="nav-btns">
-            <a class="nav-link" href="#home">HOME</a>
-            <a class="nav-link" href="#about-us">ABOUT US</a>
-            <a class="nav-link" href="#footer">CONTACT</a>
+            <a class="nav-link" href="index.html">HOME</a>
+            <a class="nav-link" href="index.html#about-us">ABOUT US</a>
+            <a class="nav-link" href="index.html#footer">CONTACT</a>
         </div>
     </nav>
     <div id="home" class="nav-comp"></div>
@@ -51,12 +51,12 @@
         <a href="#sdg-six" class="sdg-nav-link">6</a>
     </div>
     <section id="fund" class="funds">
-        <img src="images/Illustrations/14.png" alt="" class="fundillus">
-        <h2 class="our-projects" data-splitting>SDG MAPPING</h2>
+        <img src="images/Illustrations/14.png" alt="" class="fundillus fundillus-static">
+        <h2 id="sdg-one" class="our-projects" data-splitting>SDG MAPPING</h2>
 
         <div class="sdg-goals">
             <hr class="vr">
-            <div id="sdg-one" class="sdg-goal">
+            <div class="sdg-goal">
                 <input type="checkbox" id="sdg-1">
                 <label for="sdg-1" class="sdg-goal-card">
                     <img src="images/sdg/E_SDG_Icons-01.jpg" alt="">
@@ -352,6 +352,11 @@
             }
         }, false);
 
+        if(screen.width < 575){
+            document.querySelectorAll(".click-to-reveal").forEach((elem)=>{
+                elem.innerHTML = `Click to reveal &nbsp; <i class="fa fa-angle-down"></i>`
+            })
+        }
 
         AOS.init();
 
