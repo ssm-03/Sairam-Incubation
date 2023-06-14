@@ -118,7 +118,7 @@ let galleryCount = galleryImgs.length-3;
 const gallerySection = document.querySelector(".gallery-images");
 
 galleryImgs.forEach((galImage)=>{
-  gallerySection.innerHTML += `<div class="gallery-image"><img src="${galImage.imgSrc}" alt="${galImage.desc}"><div src="${galImage.imgSrc}" alt="${galImage.desc}" class="text-gradient">${galImage.desc}</div></div>`
+  gallerySection.innerHTML += `<div class="gallery-image"><img loading="lazy" src="${galImage.imgSrc}" alt="${galImage.desc}"><div src="${galImage.imgSrc}" alt="${galImage.desc}" class="text-gradient">${galImage.desc}</div></div>`
 })
 
 const opener = document.querySelector(".gallery-open").innerHTML += `<i class="fa fa-angle-down"></i> &nbsp; ${galleryCount} more`
