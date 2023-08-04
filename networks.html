@@ -6,20 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <title>iDEX Funds - Sairam Techno Incubator </title>
+    <link rel="stylesheet" href="js/swiper-bundle.min.css"/>
+    <script src="js/swiper-bundle.min.js"></script>
+    <link href="js/aos.css" rel="stylesheet">
+    <script src="js/aos.js"></script>
+    <script src="js/scroll-out.min.js"></script>
+    <link rel="stylesheet" href="js/splitting.css" />
+    <link rel="stylesheet" href="js/splitting-cells.css" />
+    <script src="js/splitting.min.js"></script>
+    <script src="countUp.min.js"></script>
+    <title>Networks - Sairam Techno Incubator</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
     <nav class="nav-main">
-        <img class="incubator-logo" src="images/logo.png" alt="Sairam Techno Incubator">
+        <img loading="lazy" class="incubator-logo" src="images/logo.png" alt="Sairam Techno Incubator">
         <div class="nav-btns">
-            <div class="nav-slider"></div>
-            <a class="nav-link" href="index.html#home">HOME</a>
+                <div class="nav-slider"></div>
+                <a class="nav-link" href="index.html#home">HOME</a>
             <a class="nav-link" href="index.html#about-us">ABOUT US</a>
             <a class="nav-link" href="index.html#projects">PRODUCTS</a>
             <a class="nav-link" href="index.html#startups">STARTUPS</a>
@@ -37,6 +42,7 @@
 
     <nav class="nav-main-mobile nav-main-hide-mobile">
         <div class="nav-btns">
+            <div class="nav-slider"></div>
             <a class="nav-link" href="index.html#home">HOME</a>
             <a class="nav-link" href="index.html#about-us">ABOUT US</a>
             <a class="nav-link" href="index.html#projects">PRODUCTS</a>
@@ -48,28 +54,18 @@
         </div>
     </nav>
 
-    <div class="nav-comp"></div>
+    <section class="networks" id="networks">
+        <br><br>
+        <h2 class="our-projects" data-splitting>OUR NETWORKS</h2>
+        <div class="network-class1">
+            <div class="network-img1"><img src="images/Networks/slminnovcenter.png" height="100" width="200" alt=""></div>
+            <div class="network-img1"><img src="images/clg.png" height="100" width="325" alt=""></div>
+            <div class="network-img1"><img src="images/logo.png" height="100" width="300" alt=""></div>
 
-
-    <section id="funding" class="why-funds">
-        <img src="images/incubator-logo.png" alt="Sairam Incubator Foundation Logo">
-
-        <div class="data">
-            <h2> HOW FUNDING WORKS? </h2>
-            <hr class="underline-funds">
-            <p class="desc-info">
-                Taking the iDEX initiative further, Defence India Startup Challenge &quot;has been launched by Ministry in partnership with AIM, aimed at supporting Startups / MSMEs / Innovators to create  prototypes and / or commercialize products / solutions in the area of National Defence and Security.
-            </p>
         </div>
-    </section>
-    
-    <section id="voucher" class="voucher-a">
-        <h2 class="our-projects">iDEX</h2>
-        <div class="vouching-companies">
-            <div class="company-card">
-                <img src="images/about-image.jpg" alt="">
-                <h3>Armour Grandeur, Pvt. Ltd.</h3>
-            </div>
+        <div class="network-class2">
+            <div class="network-img2"><img src="images/Networks/networks1.jpg" height="600" width="400" alt=""></div>
+            <div class="network-img2"><img src="images/Networks/networks2.jpg" height="500" width="700" alt=""><h2>Indo-UAE Economic Chamber of Commerce</h2></div>
         </div>
     </section>
 
@@ -90,7 +86,7 @@
             <a class="nav-link" href="ipr.html">IPR</a>
             <a class="nav-link" href="mgmt.html">MANAGEMENT</a>
             <a class="nav-link" href="collab.html">COLLABORATIONS</a>
-            <a class="nav-link" href="fundings.html">FUNDINGS</a>
+            <a class="nav-link" href="funding.html">FUNDINGS</a>
             <a class="nav-link" href="gallery.html">GALLERY</a>
             <a class="nav-link" href="sdg.html">S.D.G.</a> 
             <a class="nav-link" href="form.html">APPLY</a>
@@ -101,10 +97,5 @@
     </section>
 
     <script src="app.js"></script>
-    <script>
-        window.onload = (e)=>{
-            document.querySelector(".underline-funds").classList.add("underline-reveal");
-        }
-    </script>
 </body>
 </html>

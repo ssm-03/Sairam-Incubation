@@ -170,7 +170,7 @@ const fundCountUpOptions = {
   suffix: '  Cr +'
 };
 
-var fundsCountUp = new countUp.CountUp('fund-countup', 1.01, fundCountUpOptions);
+var fundsCountUp = new countUp.CountUp('fund-countup', 1.40, fundCountUpOptions);
 if (!fundsCountUp.error) {
   fundsCountUp.start();
 } else {
